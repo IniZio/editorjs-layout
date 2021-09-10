@@ -1,6 +1,6 @@
 {
-  "name": "editorjs-layout",
-  "version": "0.0.0",
+  "name": "newman-editorjs-layout",
+  "version": "0.0.1",
   "description": "Layout block tool for Editor.js. ",
   "keywords": [
     "codex editor",

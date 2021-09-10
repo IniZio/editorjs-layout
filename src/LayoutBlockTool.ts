@@ -20,6 +20,7 @@ interface LayoutBlockToolConfig {
     EditorConfig,
     "holder" | "data" | "minHeight" | "readOnly"
   >;
+  onSave?: (data: ValidatedLayoutBlockToolData) => any;
   /** Reserved flag for the future */
   enableLayoutEditing: false;
   enableLayoutSaving: boolean;
@@ -145,6 +146,8 @@ class LayoutBlockTool implements BlockTool {
 
     this.#itemContent = data.itemContent;
     this.#layout = data.layout;
+
+    this.#config.onSave?.(data);
 
     this.renderWrapper();
   };
